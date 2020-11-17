@@ -6,6 +6,8 @@ import './plugins/element.js'
 import './assets/fonts/iconfont.css'
 // 导入全局样式表
 import './assets/css/global.css'
+// 导入插件到项目中
+import TreeTable from 'vue-table-with-tree-grid'
 
 import axios from 'axios'
 // 配置请求的根路径
@@ -22,6 +24,8 @@ Vue.prototype.$http = axios
 
 Vue.config.productionTip = false
 
+// 注册为全局变量
+Vue.component('tree-table',TreeTable)
 new Vue({
   router,
   render: h => h(App)
